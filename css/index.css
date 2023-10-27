@@ -1,0 +1,55 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.image3D {
+    width: 250px; /* Измените, чтобы подогнать под ваш размер */
+    height: 300px; /* Измените, чтобы подогнать под ваш размер */
+    box-shadow: 15px 15px 15px rgba(56, 56, 56, 0.76);
+    margin-left: -1700px;
+    border-radius: 20px;
+    margin-top: 390px;
+}
+.Male{
+    color: #0f0f0f;
+    z-index: 9999;
+    margin-top: 0px;
+    background-color: rgba(255, 255, 255, 0.58);
+    width: 6cm; /* Измените, чтобы подогнать под ваш размер */
+    height: 0.8cm;
+    border-radius: 20px;
+}
+@media screen and (max-width: 768px) {
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+    }
+
+    .image3D {
+        width: 150px; /* Измените, чтобы подогнать под ваш размер */
+        height: 200px; /* Измените, чтобы подогнать под ваш размер */
+        box-shadow: 15px 15px 15px rgba(56, 56, 56, 0.76);
+        margin-left: -200px;
+        border-radius: 20px;
+        margin-top: 350px;
+    }
+    .Male{
+        color: #0f0f0f;
+        z-index: 9999;
+        margin-top: 400px;
+        background-color: rgba(255, 255, 255, 0.58);
+        width: 6cm; /* Измените, чтобы подогнать под ваш размер */
+        height: 0.8cm;
+        border-radius: 20px;
+    }
+
+
+
+}

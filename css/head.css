@@ -1,0 +1,150 @@
+header {
+    position: relative;
+}
+
+.button-container {
+    position: absolute;
+    top: -55px;
+    right: 45px;
+
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.button-item {
+    margin-left: 10px; /* Расстояние между кнопками */
+}
+
+.button-item a {
+    text-decoration: none;
+    color: #000; /* Цвет текста кнопок */
+    background-color: rgba(255, 255, 255, 0); /* Фон кнопок */
+    padding: 5px 10px;
+    border-radius: 5px; /* Скругление углов кнопок */
+    display: block;
+
+}
+
+.button-item a:hover {
+    background-color: rgba(238, 238, 238, 0); /* Фон кнопок при наведении */
+}
+.button-item a.logout-button {
+    align-self: center; /* Выравнивание по центру */
+    background-color: initial; /* Убрать фон */
+    padding: initial; /* Убрать отступы */
+    margin-top: 4px;
+}
+
+.button-item a.logout-button:hover {
+    background-color: initial; /* Убрать изменение фона при наведении */
+}
+.logo-img{
+    max-width: 150px;
+    max-height: 120px;
+
+
+}
+.a.logo-link{
+    max-width: 150px;
+    max-height: 120px;
+}
+.header.transparent-header{
+    max-width: 0px;
+    max-height: 0px;
+}
+.transparent-header{
+ margin-top: -100px;
+    margin-right: 100px;
+}
+.ul.nav{
+    margin-top: -100px;
+    margin-right: 100px;
+}
+.login-button {
+    background-color: rgba(255, 255, 255, 0); /* Цвет фона кнопки */
+    color: #000000; /* Цвет текста кнопки */
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    border-radius: 5px; /* Закругленные углы */
+    text-decoration: none; /* Убираем подчеркивание ссылки */
+    margin-right: 2px; /* Отступ справа */
+}
+
+.login-button:hover {
+    color: #000000; /* Цвет текста кнопки при наведении */
+}
+.register-button {
+    background-color: rgba(255, 255, 255, 0); /* Цвет фона кнопки */
+    color: #000000; /* Цвет текста кнопки */
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    border-radius: 5px; /* Закругленные углы */
+    text-decoration: none; /* Убираем подчеркивание ссылки */
+    transition: color 0.3s; /* Плавный переход цвета текста */
+    margin-left: 2px;
+    margin-right: -20px;
+}
+
+.register-button:hover {
+    color: #000000; /* Цвет текста кнопки при наведении */
+}
+
+.admin-panel-button{
+    background-color: rgba(255, 255, 255, 0); /* Цвет фона кнопки */
+    color: #000000; /* Цвет текста кнопки */
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    border-radius: 5px; /* Закругленные углы */
+    text-decoration: none; /* Убираем подчеркивание ссылки */
+}
+.cart-icon {
+    width: 25px; /* Увеличил размер иконки */
+    height: 25px;
+    border: none;
+    margin-left: 5px;
+    margin-top: -5px;
+}
+.logout-button,
+.logout-button:hover {
+    background-color: rgba(255, 255, 255, 0); /* Цвет фона кнопки */
+    color: #000000; /* Цвет текста кнопки */
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    border-radius: 10px; /* Закругленные углы */
+    text-decoration: none; /* Убираем подчеркивание ссылки */
+    margin-left: 5px; /* Отступ между кнопками */
+    margin-top: 15px; /* Опускаем на 15 пикселей вниз */
+}
+/* Стили для бургер-меню */
+.burger-menu {
+    cursor: pointer;
+    display: none; /* По умолчанию скрыт */
+    font-size: 30px;
+    margin-right: 200px!important;
+}
+
+/* Стили для меню на маленьких экранах */
+@media screen and (max-width: 768px) {
+    .burger-menu {
+        display: block; /* Отображаем на маленьких экранах */
+
+    }
+    .menu-items {
+        display: none; /* Скрываем элементы меню на маленьких экранах */
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        z-index: 1;
+    }
+    .menu-items.open {
+        display: block; /* Отображаем, когда меню открыто */
+    }
+    .button-container {
+        flex-direction: column;
+    }
+    .button-item {
+        width: 100%;
+        text-align: center;
+
+    }
+}

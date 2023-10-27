@@ -1,0 +1,232 @@
+
+
+@font-face {
+    font-family: 'MontserratLocal';
+    src: url('/fonts/ofont.ru_Montserrat.ttf') format('truetype');
+}
+
+.main-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product-card {
+    position: relative;  /* Добавлено для позиционирования сердечка */
+    height: 700px;
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-card img {
+    max-height: 500px;
+    max-width: 500px;
+    border-radius: 30px;
+}
+
+.price {
+    text-align: center;
+    font-size: 24px;
+}
+
+h3 {
+    font-family: 'MontserratLocal', sans-serif;
+}
+
+.image-container {
+    position: relative;
+    overflow: visible;  /* Удостоверьтесь, что содержимое не обрезается */
+}
+
+.heart {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 38px;
+    height: 30px;
+    cursor: pointer;
+    overflow: visible;  /* Удостоверьтесь, что содержимое не обрезается */
+}
+
+.heart img {
+    width: 100%;
+    height: 100%;
+    overflow: visible;  /* Удостоверьтесь, что содержимое не обрезается */
+}
+a.product-card-link h3,
+a.product-card-link .price {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+a.product-card-link:hover h3,
+a.product-card-link:hover .price {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+a.product-card-link {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+
+/* Задать стили для области, в которой отображается выбранная опция */
+.select2-container--default .select2-selection--single {
+    width: 200px !important;
+    border-radius: 30px !important;
+    border: 2px solid #ccc !important;  /* Установите цвет границы по вашему усмотрению */
+}
+
+/* Убрать синий фон при наведении на выпадающий список */
+.select2-container--default.select2-container--open .select2-selection--single,
+.select2-container--default.select2-container--focus .select2-selection--single {
+    background-color: #fff !important;  /* или другой цвет фона */
+    border: solid #ccc 1px !important;
+    outline: none !important;
+}
+.select2-container--default .select2-results__option--selected {
+    background-color: rgba(255, 255, 255, 0) !important; /* или другой желаемый цвет фона */
+    color: #333 !important;  /* или другой желаемый цвет текста */
+}
+/* Убрать синий фон при наведении на опции */
+.select2-container--default .select2-results__option--highlighted[aria-selected],
+.select2-container--default .select2-results__option--highlighted[data-selected] {
+    background-color: #fff !important;  /* или другой цвет фона */
+    color: #333 !important;  /* или другой цвет текста */
+}
+
+/* Стили для выпадающего меню */
+.select2-container--open .select2-dropdown {
+    width: 200px !important;
+    border-radius: 20px !important;
+    margin-top: 10px !important;
+    background-color: #fff !important;  /* Устанавливаем непрозрачный фон */
+    border: 2px solid #ccc !important;  /* Установите цвет границы по вашему усмотрению */
+}
+
+/* Убрать обводку при фокусе и наведении на опции */
+.select2-container--default .select2-results__option--highlighted[aria-selected]:focus,
+.select2-container--default .select2-results__option--highlighted[data-selected]:focus,
+.select2-container--default .select2-results__option--highlighted[aria-selected]:hover,
+.select2-container--default .select2-results__option--highlighted[data-selected]:hover {
+    outline: none !important;
+    border: none !important;  /* Убрать границы */
+}
+
+/* Убрать фон у выбранной опции */
+.select2-container--default .select2-results__option[aria-selected=true] {
+    background-color: transparent !important;
+}
+/* Убрать серый цвет у выбранной опции */
+.select2-container--default .select2-results__option--selected {
+    color: #333 !important;  /* Устанавливаем желаемый цвет текста */
+}
+/* Убрать обводку вокруг содержимого внутри списка */
+.select2-container--default .select2-results__option {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+/* Установить цвет текста для выбранной опции */
+.select2-container--default .select2-results__option[aria-selected=true],
+.select2-container--default .select2-results__option[data-selected=true] {
+    color: rgb(0, 0, 0) !important;  /* или другой цвет текста */
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    text-align: center !important;
+    line-height: normal !important;  /* или установите конкретное значение */
+    padding-top: 0 !important;      /* или установите конкретное значение */
+    padding-bottom: 0 !important;   /* или установите конкретное значение */
+}
+
+
+/* Для текста в выпадающем списке: выровнять текст по первым буквам */
+.select2-container--default .select2-results__option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    text-align: center !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    display: none !important;
+}
+.select2-container--default .select2-results__option {
+    text-align: center !important;
+    padding-top: 0px !important;  /* Уменьшенный отступ сверху */
+    padding-bottom: 0px !important;  /* Уменьшенный отступ снизу */
+}
+/* Стили для кружочков */
+.circle {
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+
+.circle-img {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+.circle-empty {
+    background-image: url('/images/empty-circle.png');
+    background-size: cover;
+    width: 16px;
+    height: 16px;
+}
+
+.circle-filled {
+    background-image: url('/images/filled-circle.png');
+    background-size: cover;
+    width: 16px;
+    height: 16px;
+}
+/* Выравнивание текста и кружочка */
+.select2-container--default .select2-results__option {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Удаление эффектов при наведении на кружочки */
+.circle:hover,
+.circle:focus {
+    background-color: transparent !important;
+    border: 1px solid black !important;
+}
+
+/* Удаление эффектов при наведении на выбранную опцию */
+.select2-container--default .select2-results__option--highlighted .circle {
+    background-color: transparent !important;
+    border: 1px solid black !important;
+}
+/* Сдвигаем текст немного вправо в выпадающем списке */
+.select2-container--default .select2-results__option {
+    padding-left: 20px !important;  /* Устанавливаем отступ слева */
+}
+.filter-button {
+    background-color: white; /* Белый фон */
+    border: 1px solid #ccc; /* Небольшая обводка */
+    border-radius: 19px; /* Закругленные края */
+    padding: 10px 30px; /* Увеличенная ширина и подходящий отступ внутри кнопки */
+    cursor: pointer; /* Изменение курсора при наведении для указания на интерактивность */
+
+    /* Размещение справа */
+    position: absolute;
+    top: 105px; /* Регулируйте верхний отступ по вашему усмотрению */
+    right: 100px; /* Регулируйте правый отступ по вашему усмотрению */
+}

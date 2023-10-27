@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="df6181cf-cd12-4165-be33-b52c3c38bda9" name="site" url="http://31.31.196.105">
+        <fileTransfer rootFolder="/www/devauled.gtastolica.ru" host="31.31.196.105" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
