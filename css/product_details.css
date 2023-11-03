@@ -1,0 +1,353 @@
+/* Подключение шрифта */
+@font-face {
+    font-family: 'TerminatorCyr';
+    src: url('/fonts/ofont.ru_Terminator Cyr.ttf'); /* Укажите актуальный путь к файлу шрифта */
+}
+@font-face {
+    font-family: 'MontserratLocal';
+    src: url('/fonts/ofont.ru_Montserrat.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Monserrat_medium';
+    src: url('/fonts/ofont.ru_Montserrat_medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Monserrat_light';
+    src: url('/fonts/ofont.ru_Montserrat_light.ttf') format('truetype');
+}
+.product-small-images-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 970px; /* Отступ слева от основного изображения */
+    width: 200px;
+    height: 200px;
+    margin-top: -950px;
+
+}
+
+.product-small-image {
+    cursor: pointer;
+    border: 1px solid #ddd;
+    opacity: 0.6; /* Затемненные изображения по умолчанию */
+    transition: opacity 0.3s ease; /* Плавное изменение прозрачности */
+}
+
+.product-small-image.active {
+    opacity: 1; /* Полная непрозрачность для активного изображения */
+}
+.breadcrumbs a {
+    text-decoration: none; /* Убирает подчеркивание */
+    color: inherit; /* Цвет ссылок будет таким же, как у родительского элемента */
+}
+
+.breadcrumbs a:hover {
+    text-decoration: none; /* Убирает подчеркивание при наведении */
+    color: inherit; /* Цвет при наведении останется таким же */
+}
+.product-card-wrapper {
+    display: flex;
+}
+
+.product-image-section {
+
+}
+.product-image-section img {
+    max-width: 950px;
+    max-height: 950px;
+    margin-right: 100px;
+    object-fit: contain;  /* Это поможет сохранить пропорции изображения */
+}
+
+h2 {
+    font-family: 'TerminatorCyr', sans-serif;
+}
+
+.product-sku {
+    font-family: 'Monserrat_medium', sans-serif;
+    color: #333;
+
+}
+
+.product-price {
+    font-family: 'Monserrat_light', sans-serif;
+    color: black;
+    font-size: 30px;  /* Увеличенный размер шрифта для цены */
+}
+
+.currency {
+    font-size: 18px;  /* Уменьшенный размер шрифта для символа рубля */
+}
+.breadcrumbs {
+    margin-bottom: 10px;  /* Добавляем нижний отступ */
+}
+.product-details {
+    /* стили для деталей продукта */
+}
+/* Кружочки для выбора цвета */
+/* Кружочки для выбора цвета */
+.product-details .color-circle {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 5px;
+    border: 2px solid #000;  /* Добавлена черная обводка толщиной 2px */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);  /* Добавлена тень */
+}
+
+/* Кружочки для выбора размера */
+.product-details .size-circle {
+    display: inline-flex;  /* Изменено с inline-block на inline-flex */
+    align-items: center;  /* Выравнивание по вертикали */
+    justify-content: center;  /* Выравнивание по горизонтали */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 5px;
+    border: 2px solid #000;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Стиль при активации (нажатии) */
+.product-details .size-circle.active {
+    background-color: grey;
+    color: white;
+}
+.product-add-to-cart {
+    font-family: 'MontserratLocal', sans-serif;
+    position: relative;
+    overflow: hidden;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);  /* Добавлена тень */
+    z-index: 0;
+    margin-top: 40px; /* Увеличиваем отступ сверху */
+
+}
+#delivery {
+    font-family: 'Monserrat_medium', sans-serif; /* Замените 'Montserrat' на имя вашего шрифта */
+}
+/* Псевдоэлемент для анимации */
+.product-add-to-cart::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    background-color: grey;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+    z-index: -1;
+
+}
+.info-link {
+    color: black; /* Устанавливает цвет текста для ссылок */
+    text-decoration: underline; /* Подчеркивание текста */
+}
+
+.info-link:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
+    color: black; /* Цвет текста при наведении остается таким же */
+}
+/* Стиль при наведении */
+.product-add-to-cart:hover::before {
+    transform: scaleX(1);
+}add-to-cart:hover::before {
+     transform: scaleX(1);
+ }
+.quantity-box {
+    /* удалить margin-top и margin-left */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 150px;
+    border-radius: 32px;
+    overflow: hidden;
+    border: 2px solid black;
+}
+
+.favorite-icon img {
+    /* удалить margin-top и margin-left */
+    cursor: pointer;
+}
+
+.quantity-button {
+    width: 40px;
+    height: 40px;
+    border: none;
+
+    background-color: rgba(204, 204, 204, 0);
+    cursor: pointer;
+    font-size: 18px;
+    text-align: center;
+}
+
+.quantity-number {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+.quantity-button:focus {
+    outline: none;
+}
+
+.available-colors .color-circle {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 5px;
+    border: 2px solid #000;  /* Добавлена черная обводка толщиной 2px */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);  /* Добавлена тень */
+}
+.product-info-fullwidth {
+    width: 100%;
+    background-color: rgba(244, 244, 244, 0);
+    padding: 20px;
+    float: none;
+    clear: both;
+    display: block;
+    position: absolute;
+    top: 1065px;
+    min-height: 400px; /* Вы можете изменить это значение */
+}
+.info-tab {
+    display: inline-block;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.info-tab span {
+    transition: border-bottom 0.3s ease-in-out;
+    border-bottom: 2px solid transparent;
+    display: inline-block;
+}
+
+.info-tab.active {
+    border-bottom: 2px solid black;
+}
+
+.info-content {
+    display: none;
+}
+
+.info-content.active {
+    display: block;
+}
+
+/* Стили для блока отзыва */
+.review {
+    position: relative; /* Добавьте эту строку */
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 10px;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.review-photo {
+    margin-right: 20px; /* Отступ фото от содержимого отзыва */
+    order: -1; /* Помещаем фото перед содержимым отзыва */
+}
+
+.review-photo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review-content-box {
+    flex-grow: 1; /* занимает все доступное пространство */
+    display: flex;
+    justify-content: space-between; /* распределение пространства между элементами */
+}
+
+.review-details {
+    display: flex;
+    align-items: baseline; /* выравнивание элементов по базовой линии */
+}
+
+.review-stars {
+    font-size: 2.5em; /* Увеличиваем размер звёзд */
+    color: #000000;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.review-name,
+.review-date-time,
+.review-color,
+.review-size {
+    margin-right: 30px; /* отступ справа для каждого элемента */
+}
+
+.review-text {
+    margin-top: 10px; /* отступ сверху для текста отзыва */
+}
+.reviews-buttons {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 20px auto;
+}
+.reviews-buttons {
+    text-align: center; /* Центрирование кнопок */
+    margin-top: 20px; /* Отступ сверху */
+}
+
+.reviews-button {
+    background-color: transparent; /* Прозрачный фон */
+    color: black; /* Черный цвет текста */
+    border: 2px solid black; /* Черная обводка */
+    padding: 10px 20px; /* Внутренние отступы */
+    font-size: 16px; /* Размер шрифта */
+    cursor: pointer; /* Курсор в виде руки при наведении */
+    border-radius: 15px; /* Закругленные края */
+    margin: 0 10px; /* Отступы справа и слева */
+    transition: background-color 0.3s, color 0.3s; /* Анимация изменения фона и цвета текста */
+}
+
+.reviews-button:hover {
+    background-color: black; /* Фон при наведении */
+    color: white; /* Цвет текста при наведении */
+}
+
+.review-card {
+    position: relative; /* Добавьте эту строку */
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 10px;
+    align-items: center;
+    overflow: hidden;
+    text-align: center; /* Выравнивание текста по центру */
+    justify-content: center;
+    flex-direction: column; /* Добавлено для вертикального стека */
+}
+.review-add-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Или желаемый отступ сверху */
+}
+
+.reviews-button {
+    /* Ваши стили кнопки, если они уже не определены */
+}

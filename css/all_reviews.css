@@ -1,0 +1,235 @@
+@font-face {
+    font-family: 'TerminatorCyr';
+    src: url('/fonts/ofont.ru_Terminator Cyr.ttf'); /* Укажите актуальный путь к файлу шрифта */
+}
+@font-face {
+    font-family: 'MontserratLocal';
+    src: url('/fonts/ofont.ru_Montserrat.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Monserrat_medium';
+    src: url('/fonts/ofont.ru_Montserrat_medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Monserrat_light';
+    src: url('/fonts/ofont.ru_Montserrat_light.ttf') format('truetype');
+}
+.review {
+    position: relative; /* Добавьте эту строку */
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 10px;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+.review-photo {
+    margin-right: 20px; /* Отступ фото от содержимого отзыва */
+    order: -1; /* Помещаем фото перед содержимым отзыва */
+}
+
+.review-photo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review-content-box {
+    flex-grow: 1; /* занимает все доступное пространство */
+    display: flex;
+    justify-content: space-between; /* распределение пространства между элементами */
+}
+
+.review-details {
+    display: flex;
+    align-items: baseline; /* выравнивание элементов по базовой линии */
+}
+
+.review-stars {
+    font-size: 2.5em; /* Увеличиваем размер звёзд */
+    color: #000000;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.review-name,
+.review-date-time,
+.review-color,
+.review-size {
+    margin-right: 30px; /* отступ справа для каждого элемента */
+}
+
+.review-text {
+    margin-top: 10px; /* отступ сверху для текста отзыва */
+}
+.reviews-buttons {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 20px auto;
+}
+.reviews-buttons {
+    text-align: center; /* Центрирование кнопок */
+    margin-top: 20px; /* Отступ сверху */
+}
+
+.reviews-button {
+    background-color: transparent; /* Прозрачный фон */
+    color: black; /* Черный цвет текста */
+    border: 2px solid black; /* Черная обводка */
+    padding: 10px 20px; /* Внутренние отступы */
+    font-size: 16px; /* Размер шрифта */
+    cursor: pointer; /* Курсор в виде руки при наведении */
+    border-radius: 15px; /* Закругленные края */
+    margin: 0 10px; /* Отступы справа и слева */
+    transition: background-color 0.3s, color 0.3s; /* Анимация изменения фона и цвета текста */
+}
+
+.reviews-button:hover {
+    background-color: black; /* Фон при наведении */
+    color: white; /* Цвет текста при наведении */
+}
+/* Добавляет внешний отступ для всего блока отзывов, который отодвигает его от краев страницы */
+#reviews {
+    margin: 0 auto; /* Автоматические отступы слева и справа для центрирования */
+    padding: 0 20px; /* Внутренние отступы слева и справа */
+    max-width: 1200px; /* Максимальная ширина блока, можно изменить по желанию */
+}
+
+/* Для мобильных устройств можно добавить медиа-запрос для уменьшения отступов */
+@media (max-width: 768px) {
+    #reviews {
+        padding: 0 10px; /* Меньше внутреннего отступа для узких экранов */
+    }
+}
+.product-info {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.product-info img {
+    width: 120px;
+    height: 120px;
+    margin-right: 20px;
+}
+
+.product-info h2 {
+    margin: 0;
+}
+.back-button-container {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+    text-decoration: none; /* Убрать подчеркивание для ссылки */
+    display: flex;
+    align-items: center;
+}
+
+.back-button:hover {
+    text-decoration: underline; /* Добавить подчеркивание при наведении */
+}
+.product-image {
+    width: 130px;
+    height: 130px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 25px;
+}
+.product-name {
+    margin: 0;
+    font-family: 'TerminatorCyr', sans-serif; /* Замените 'Arial' на желаемый шрифт */
+    /* Добавьте любые другие стили, которые вы хотите применить */
+}
+.product-top-section {
+    display: flex;
+    align-items: center;
+    padding-left: 20px; /* Добавляете отступ слева */
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-rating {
+    display: flex;
+    align-items: center; /* Это выравнивает элементы рейтинга по центру */
+    gap: 10px; /* Добавляет пространство между элементами рейтинга */
+}
+
+.average-rating {
+    margin: 0; /* Убираем внешние отступы для заголовка */
+}
+
+.stars-output {
+    font-size: 2em; /* Увеличиваем размер шрифта для звезд */
+    color: #000000; /* Добавляем золотой цвет, если хотите */
+}
+
+.total-reviews {
+    font-size: 1.5em; /* Увеличиваем размер шрифта для количества оценок */
+    margin-top: 15px;
+}
+.write-review-button-container {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.write-review-button {
+    background-color: transparent; /* Прозрачный фон */
+    color: black; /* Черный цвет текста */
+    border: 2px solid black; /* Черная обводка */
+    padding: 10px 20px; /* Внутренние отступы */
+    font-size: 16px; /* Размер шрифта */
+    cursor: pointer; /* Курсор в виде руки при наведении */
+    border-radius: 15px; /* Закругленные края */
+    margin: 0 20px; /* Отступы справа и слева */
+    transition: background-color 0.3s, color 0.3s; /* Анимация изменения фона и цвета текста */
+}
+
+.reviews-container {
+    /* Стили для контейнера отзывов, если требуется */
+}
+.sorting-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20px; /* Increase this if you want more space from the left edge */
+    font-size: 1.1em; /* Increase the font size */
+}
+
+/* Стили для элементов сортировки */
+.sorting-container a {
+    margin-left: 10px; /* Space after the colon */
+    text-decoration: none; /* Remove default underline */
+    color: black; /* Change the color to black */
+    padding-bottom: 3px; /* Add padding to lower the border-bottom */
+    display: inline-block; /* Needed to apply padding and border to an anchor */
+}
+
+/* Стиль для активного элемента сортировки */
+.sorting-container a.active {
+    border-bottom: 1px solid black; /* Simulate underline */
+}
+
+/* Стиль для неактивного элемента сортировки */
+.sorting-container a.inactive {
+    color: grey; /* Grey out the inactive sorting link */
+}

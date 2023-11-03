@@ -1,0 +1,234 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 50%;
+    margin: auto;
+}
+
+#profile, #addresses, #payments, #orders {
+    background: #ffffff;
+    margin: 30px 0;
+    padding: 30px;
+    box-shadow: 0px 0px 10px #ccc;
+}
+
+h2 {
+    font-size: 30px;
+    color: #333;
+}
+
+p, li {
+    font-size: 18px;
+    line-height: 1.6em;
+    color: #666;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+.btn {
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    background: #3498db;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #2980b9;
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: rgba(255, 255, 255, 0.81) !important; /* Белый цвет с 80% прозрачности */
+    backdrop-filter: blur(20px) !important;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+}
+.credit-card-box {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    background: #fff url('path-to-your-card-background-image');
+    background-size: cover;
+    box-shadow: 0px 0px 10px #ccc;
+    border-radius: 10px;
+}
+.modal-dialog-centered {
+    display: flex;
+    align-items: center;
+    min-height: calc(100% - (1.75rem * 2));
+}
+.user-photo {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 15px; /* Добавить отступ снизу */
+}
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+@media (max-width: 767px) {
+    .user-info p {
+        font-size: 12px;
+        white-space: normal;
+    }
+    .user-photo {
+        width: 100%;
+        height: auto;
+    }
+}
+.back-to-site {
+    margin-top: 10px;  /* отступ сверху */
+    display: block;  /* делаем кнопку блочным элементом */
+    margin-left: auto;  /* выравниваем по центру */
+    margin-right: auto;
+}
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    background-color: #f1f1f1;
+    font-family: "Segoe UI", sans-serif;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 34rem;
+    width: 90%;
+}
+
+input{
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font: inherit;
+    width: auto;
+}
+
+input::placeholder{
+    color: #fff;
+}
+
+label{
+    display: block;
+}
+
+.card{
+    background-color: #171a1c;
+    border-radius: 14px;
+    color: #bebebe;
+    padding: 32px;
+}
+
+.header{
+    margin-bottom: 7rem;
+}
+
+.title{
+    color: #fff;
+    float: left;
+    font-size: 1.5rem;
+}
+
+.logo{
+    float: right;
+}
+
+.row{
+    margin-bottom: 1.5rem;
+}
+
+.content{
+    margin-bottom: 5rem;
+}
+
+.content input{
+    outline: none;
+}
+
+.card-number{
+    font-size: 32px;
+}
+
+.card-expire{
+    float: left;
+}
+
+.card-expire input{
+    font-size: 0.9rem;
+}
+
+.card-expire-month{
+    width: 22%;
+}
+
+.card-expire-month, .card-expire-year{
+    float: left;
+}
+
+.card-cvv{
+    float: right;
+}
+
+.card-cvv input{
+    width: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
