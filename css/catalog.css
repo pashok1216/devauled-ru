@@ -6,11 +6,11 @@
 }
 
 .main-container {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Меняете 250px на желаемую ширину карточки */
+    grid-gap: 20px; /* Расстояние между карточками */
+    padding: 20px; /* Отступы контейнера */
     justify-content: center;
-    gap: 20px;
 }
 
 .product-card {
@@ -22,8 +22,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 20px; /* Отступ снизу для разделения рядов */
+    /* Остальные стили */
 }
-
+@media (min-width: 1200px) { /* Или другой размер, в зависимости от ширины экрана */
+    .main-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
 .product-card img {
     max-height: 500px;
     max-width: 500px;

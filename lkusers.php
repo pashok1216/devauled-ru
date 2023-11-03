@@ -86,7 +86,7 @@ if ($hour >= 6 && $hour < 12) {
                 <div class="list-group list-group-flush">
                     <a href="profile.php" class="list-group-item list-group-item-action">Профиль</a>
                     <a href="addresses.php" class="list-group-item list-group-item-action">Адреса Доставки</a>
-                    <a href="payments.php" class="list-group-item list-group-item-action">Способы оплаты</a>
+<!--                    <a href="payments.php" class="list-group-item list-group-item-action">Способы оплаты</a>-->
                     <a href="history_orders.php" class="list-group-item list-group-item-action">История заказов</a>
                     <a href="help_user.php" class="list-group-item list-group-item-action">Тех. Поддержка</a>
                 </div>

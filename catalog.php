@@ -36,7 +36,14 @@ if ($conn->connect_error) {
 <button class="filter-button" type="button">Филтры</button>
 <div class="main-container">
     <?php
+    $product_class = isset($_GET['class']) ? $_GET['class'] : null;
+
+    // The SQL query will filter products by class if it is provided.
     $sql = "SELECT * FROM products WHERE gender='Unisex'";
+    if ($product_class !== null) {
+        $sql .= " AND product_class='" . $conn->real_escape_string($product_class) . "'";
+    }
+
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {

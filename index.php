@@ -27,7 +27,8 @@ require_once 'record_visit.php';
 <div class="container">
     <img src="images/650c9ac5790ed.jpg" alt="3D Image" class="image3D">
 </div>
-<a class="Male" href="catalog.php">Майка</a>
+<a href="catalog.php?class=sweatshirts">Толстовки</a>
+<a href="catalog.php?class=jeans">Джинсы</a>
 </div>
 <footer>
     <?php

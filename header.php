@@ -51,7 +51,7 @@ require_once 'registermenu.php'
                     <a class="lkusers" href="/lkusers.php">Личный кабинет</a>
                 </li>
                 <li class="button-item">
-                    <a class="cart-button" href="/cart">
+                    <a class="cart-button" href="cart.php">
                         <img src="images/cart.png" alt="Cart Icon" class="cart-icon">
                         <span id="cartItemCount"></span>
                     </a>
